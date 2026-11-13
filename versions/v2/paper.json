@@ -1,0 +1,62 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 91243,
+      "matches_public": null,
+      "path": "paper.pdf",
+      "public_sha256": null,
+      "sha256": "ff5c1a8f5af8d94f0c8785dab07e672516a3931bcbfb0a93ca2c5c7340185e1e"
+    },
+    "source": {
+      "bytes": 14624,
+      "matches_public": null,
+      "path": "manuscript/",
+      "public_sha256": null,
+      "sha256": "85119aab85cb1109001de5f66ba19df8306867142b3a3e6bbecb1c7baa1b2385"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "We resolve Question III.5 of Stepanov, Herrmann and Guhr (arXiv:2104.08966v1, p. 7): on the remaining domain D = A minus (A1 union A2), correlation matrices with prescribed mean c and standard deviation sigma and a nonmaximal top-eigenvector weight in every orthonormal eigenbasis exist in every sufficiently large dimension exactly when sigma > c. Centered spectral moments exclude the diagonal, and a positive definite rank-two construction gives existence above it. Throughout the legal half-disc sigma >= 0, c^2 + sigma^2 <= 1, eventual existence holds exactly for 0 <= c < 1/2, sigma > c and c^2 + sigma^2 < 1. A spectral-projection criterion treats eigenvalue multiplicities and shows that a rank-one boundary matrix has the universal gap exactly when c < 0.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": "10.5281/zenodo.23927427",
+    "current_version": 2,
+    "doi": "10.5281/zenodo.23927428",
+    "lean_source": {
+      "revision": "8c3421e2977f07cb0b5d9b30b7ede138d9951cb5",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/8c3421e2977f07cb0b5d9b30b7ede138d9951cb5/D5/S3/Estimation/CorrelationTopEigenvectorWeight.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "url": "/api/v1/collected-papers/stepanov-herrmann-guhr-2021-correlation-top-eigenvector-weight/files/pdf?version=2"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-05T08:03:37.473503904Z",
+    "record": "stepanov-herrmann-guhr-2021-correlation-top-eigenvector-weight",
+    "repository_name": "6aec38599153a8dcadd6fdda",
+    "source": {
+      "url": "/api/v1/collected-papers/stepanov-herrmann-guhr-2021-correlation-top-eigenvector-weight/files/source?version=2"
+    },
+    "title": "Resolving Question III.5 of Stepanov–Herrmann–Guhr (arXiv:2104.08966v1, p. 7): the top-eigenvector weight gap occurs exactly above sigma = c",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-05T08:03:37.473503904Z",
+        "revision": "2",
+        "version": 2
+      }
+    ],
+    "work": "stepanov-herrmann-guhr-2021-correlation-top-eigenvector-weight"
+  }
+}

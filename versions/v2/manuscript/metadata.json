@@ -1,0 +1,15 @@
+{
+  "id": "stepanov-herrmann-guhr-2021-correlation-top-eigenvector-weight",
+  "revision": 2,
+  "problem_ids": ["stepanov-herrmann-guhr-2021-correlation-top-eigenvector-weight"],
+  "topic": "Question III.5 of Stepanov–Herrmann–Guhr, arXiv:2104.08966v1, p. 7: eventual top-eigenvector weight gaps for correlation matrices",
+  "title": "Resolving Question III.5 of Stepanov–Herrmann–Guhr (arXiv:2104.08966v1, p. 7): the top-eigenvector weight gap occurs exactly above sigma = c",
+  "creators": [
+    {"name": "Haobo Ma", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Wenlin Zhang", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "We resolve Question III.5 of Stepanov, Herrmann and Guhr (arXiv:2104.08966v1, p. 7): on the remaining domain D = A minus (A1 union A2), correlation matrices with prescribed mean c and standard deviation sigma and a nonmaximal top-eigenvector weight in every orthonormal eigenbasis exist in every sufficiently large dimension exactly when sigma > c. Centered spectral moments exclude the diagonal, and a positive definite rank-two construction gives existence above it. Throughout the legal half-disc sigma >= 0, c^2 + sigma^2 <= 1, eventual existence holds exactly for 0 <= c < 1/2, sigma > c and c^2 + sigma^2 < 1. A spectral-projection criterion treats eigenvalue multiplicities and shows that a rank-one boundary matrix has the universal gap exactly when c < 0.",
+  "summary": "The pinned Lean declaration D5.S3.Estimation.CorrelationTopEigenvectorWeight.result proves the eventual equivalence on D. Written proofs establish finite-dimensional inequalities, the all-A classification with compact uniformity, a majority and angle bound for sigma <= c, an eigenspace criterion, zero-mean witnesses, the circular boundary, the full legal-half-disc classification and a symmetric-matrix obstruction. Finite exact checks cover four positive-mean matrices, 37 zero-mean witnesses and 851 circular-boundary controls, plus 2100 centered-energy controls and 28 equality controls. The 16-dimensional example has weights 3/7 and 4/7.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/8c3421e2977f07cb0b5d9b30b7ede138d9951cb5/D5/S3/Estimation/CorrelationTopEigenvectorWeight.lean"
+}

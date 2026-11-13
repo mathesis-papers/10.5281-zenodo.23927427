@@ -1,0 +1,469 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{microtype}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\R}{\mathbb R}
+\newcommand{\G}{\mathcal G}
+\title{Resolving Question III.5 of Stepanov--Herrmann--Guhr\\
+(arXiv:2104.08966v1, p.~7):\\
+the top-eigenvector weight gap occurs exactly above $\sigma=c$}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\
+\small ChronoAI Pte Ltd, Singapore}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We resolve Question III.5 of Stepanov, Herrmann and Guhr
+(arXiv:2104.08966v1, p.~7): on their remaining domain
+$A\setminus(A_1\cup A_2)$, correlation matrices with prescribed
+off-diagonal mean $c$ and standard deviation $\sigma$ and a nonmaximal
+top-eigenvector weight exist in every sufficiently large dimension
+exactly when $\sigma>c$.
+A centered spectral-moment inequality excludes $\sigma=c$ in every
+dimension. A rank-two perturbation of a scalar matrix gives the required
+matrices for $\sigma>c$. The same construction gives an exact eventual
+classification on the entire legal half-disc, including zero mean and
+the circular boundary. An eigenspace criterion makes the requirement
+of a weight gap in every eigenbasis explicit.
+\end{abstract}
+
+\section{The question and its conventions}
+We answer Question III.5 of \cite[p.~7]{SHG} with the basis-independent
+meaning of the weight gap in their Definition VI.1 (p.~12).
+The question is answered by Theorem~\ref{thm:question}; the boundary
+corollaries below complete the eventual classification.
+A correlation matrix is a real symmetric positive semidefinite matrix
+$C$ with $C_{ii}=1$. For $n\ge2$, put
+\begin{equation}\label{eq:moments}
+ c(C)=\frac{2}{n(n-1)}\sum_{i>j}C_{ij},\qquad
+ \sigma(C)^2=\frac{2}{n(n-1)}\sum_{i>j}C_{ij}^2-c(C)^2,
+\end{equation}
+where $\sigma(C)\ge0$. If $Cv_j=\lambda_jv_j$ is an orthonormal
+eigenbasis, ordered by $\lambda_1\ge\cdots\ge\lambda_n$, set
+$\delta_n=(1,\ldots,1)/\sqrt n$ and $w_j=\langle v_j,\delta_n\rangle^2$.
+Write $\G(C)$ if, for every such basis and every index of a maximal
+eigenvalue, another index has a strictly larger weight.
+This includes all choices inside repeated eigenspaces.
+
+The source defines
+\begin{align*}
+ A&=\{(c,\sigma):c>0,\ \sigma>0,\ c^2+\sigma^2<1\},\\
+ A_1&=\{(c,\sigma)\in A:c\ge\tfrac12\ \text{or}\ \sigma<c\},\\
+ A_2&=\{(c,\sigma)\in A:\sigma>\sqrt3c\ \text{or}\ c<\sigma<1-c\}.
+\end{align*}
+Let $D=A\setminus(A_1\cup A_2)$. Its points satisfy
+$0<c<1/2$, $\sigma\ge c$, and either $\sigma=c$ or
+$1-c\le\sigma\le\sqrt3c$.
+
+\begin{samepage}
+\begin{theorem}\label{thm:question}
+For each $(c,\sigma)\in D$, the following are equivalent:
+\begin{enumerate}
+\item There is an $N$ such that every integer $n\ge N$ admits an
+$n\times n$ correlation matrix $C$ with
+$c(C)=c$, $\sigma(C)=\sigma$, and $\G(C)$.
+\item $\sigma>c$.
+\end{enumerate}
+If $\sigma=c$, no such matrix exists in any dimension $n\ge2$.
+\end{theorem}
+\end{samepage}
+
+The characteristic identities in \cite[Lemma II.5]{SHG} supply the
+spectral moments used below. The construction has two constant
+within-group correlations and one between-group correlation. Positive
+definiteness of this block-matrix class is also studied in \cite{RD};
+here a sum of positive rank-one matrices makes positivity explicit.
+
+\section{Obstructions from two spectral moments}
+\begin{proposition}\label{prop:obstruction}
+Let $C$ have size $n\ge3$ and $c=c(C)>0$, $\sigma=\sigma(C)$.
+If a top eigenvector in an orthonormal eigenbasis has weight at most
+$1/2$, then
+\begin{equation}\label{eq:necessary}
+ \sigma^2\ge\frac{n}{n-2}c^2,\qquad
+ c\le\frac{n-2}{2(n-1)}.
+\end{equation}
+Consequently $\G(C)$ is impossible if $\sigma\le c$ or $c\ge1/2$.
+\end{proposition}
+\begin{proof}
+Put $\mu_j=\lambda_j-1$. The trace, squared Frobenius norm, and
+Rayleigh quotient give
+\begin{equation}\label{eq:spectral}
+ \sum_j\mu_j=0,\quad
+ \sum_j\mu_j^2=n(n-1)(c^2+\sigma^2),\quad
+ \sum_j\mu_jw_j=(n-1)c,\quad \sum_jw_j=1.
+\end{equation}
+For example, $\operatorname{tr}(C^2)=n+n(n-1)(c^2+\sigma^2)$,
+and $\delta_n^TC\delta_n=1+(n-1)c$, proving these identities.
+Take a top index as index 1 and the largest remaining eigenvalue as
+index 2. If $w_1\le1/2$, then
+\[
+ (n-1)c\le\mu_1w_1+\mu_2(1-w_1)
+ \le\frac{\mu_1+\mu_2}{2}.
+\]
+Set $S=\mu_1+\mu_2>0$. Since $\sum_{j\ge3}\mu_j=-S$,
+Cauchy--Schwarz gives
+\[
+ \sum_j\mu_j^2\ge\frac{S^2}{2}+\frac{S^2}{n-2}
+ =\frac{nS^2}{2(n-2)}
+ \ge\frac{2n(n-1)^2c^2}{n-2}.
+\]
+Substitution into \eqref{eq:spectral} proves the first inequality
+in \eqref{eq:necessary}. Independently, nonnegativity and trace $n$
+give
+\[
+ 1+(n-1)c=\sum_j\lambda_jw_j
+ \le\tfrac12(\lambda_1+\lambda_2)\le n/2,
+\]
+which proves the second. A strict weight gap forces $w_1<1/2$:
+if $w_j>w_1$ for some $j\ne1$, then $2w_1<w_1+w_j\le1$.
+For $n=2$, there is a single off-diagonal coefficient, so
+$\sigma(C)=0$; if $c>0$, its top eigenvector is $\delta_2$ and has
+weight 1. This also excludes the relevant two-dimensional cases.
+\end{proof}
+
+\begin{corollary}\label{cor:majority}
+If $c>0$ and $\sigma\le c$, the largest eigenvalue is simple and its
+weight is greater than $1/2$ in every dimension. Its acute angle
+$\theta_1=\arccos\sqrt{w_1}$ with $\delta_n$ satisfies
+$\theta_1\le\arctan(\sigma/c)$.
+\end{corollary}
+\begin{proof}
+For $n\ge3$, Proposition~\ref{prop:obstruction} excludes $w_1\le1/2$.
+Any unit top eigenvector extends to an orthonormal eigenbasis. If the
+top eigenspace had dimension at least two, it would contain a unit
+vector orthogonal to $\delta_n$, contradicting $w_1>1/2$.
+The case $n=2$ follows from the last paragraph of that proposition.
+To obtain the angle bound, center the two vectors
+$\mu=(\lambda_j-1)_j$ and $w=(w_j)_j$ in \eqref{eq:spectral}.
+Cauchy--Schwarz gives
+\[
+ (n-1)^2c^2\le n(n-1)(c^2+\sigma^2)
+ \left(\sum_jw_j^2-\frac1n\right).
+\]
+Thus $\sum_jw_j^2\ge \frac1n+\frac{n-1}{n}
+\frac{c^2}{c^2+\sigma^2}\ge\frac{c^2}{c^2+\sigma^2}$,
+which is also \cite[Eq.~(IV.17)]{SHG}.
+Since $w_1>1/2$, $w_1=\max_jw_j\ge\sum_jw_j^2$.
+Taking square roots and acute angles proves the assertion.
+This extends the sufficient angular regime of Remark III.7
+in \cite[p.~8]{SHG} to $\sigma\le c$.
+\end{proof}
+
+In particular, any positive-mean matrix with $\G$ must have
+\[
+ n\ge\max\left\{\frac{2\sigma^2}{\sigma^2-c^2},
+                   \frac{2(1-c)}{1-2c}\right\}.
+\]
+Both denominators are positive by Proposition~\ref{prop:obstruction};
+the bounds follow by rearranging \eqref{eq:necessary}.
+
+\section{An exact rank-two construction}
+\begin{proposition}\label{prop:construction}
+If $0<c<1/2$, $\sigma>c$, and $c^2+\sigma^2<1$, then in every
+sufficiently large dimension there is a positive definite correlation
+matrix with characteristic $(c,\sigma)$ satisfying $\G$.
+\end{proposition}
+\begin{proof}
+Define
+\[
+ L=\frac{\sigma^2-(1-c)^2}{\sigma^2+(1-c)^2},\qquad
+ U=\frac{\sigma^2-c^2}{\sigma^2+c^2},\qquad
+ x=\frac{\max(0,L)+\min(c,U)}2.
+\]
+The interval containing $x$ is nonempty. Indeed $U>0$,
+$L<c$ follows from $(1-c)(1-c^2-\sigma^2)>0$, and
+$L<U$ follows from $2\sigma^2(1-2c)>0$ after multiplication by
+the positive denominators. Thus
+\begin{equation}\label{eq:interval}
+ \max(0,L)<x<\min(c,U)<1/2.
+\end{equation}
+Set $a=\sigma/\sqrt{1-x^2}$, $b=c-ax$, and $d=1-a-b$.
+Then $a,b,d>0$ and $a+b>2c$.
+For $b>0$, observe that
+$(c^2+\sigma^2)x^2<c^2$, since $x<c$ and $c^2+\sigma^2<1$.
+The other two inequalities follow by squaring positive quantities:
+\[
+ d>0\ \Longleftrightarrow\
+ \sigma^2\frac{1-x}{1+x}<(1-c)^2\ \Longleftrightarrow\ x>L,
+\]
+\[
+ a+b>2c\ \Longleftrightarrow\
+ \sigma^2\frac{1-x}{1+x}>c^2\ \Longleftrightarrow\ x<U.
+\]
+
+For each $n\ge2$, choose a nearest integer $k_n$ to
+$n(1+\sqrt{x})/2$, and let $s\in\{1,-1\}^n$ have $k_n$ plus
+signs. Write $e=(1,\ldots,1)^T$ and
+\begin{align*}
+ t_n&=\frac{2k_n-n}{n},&
+ z_n&=\frac{(2k_n-n)^2-n}{n(n-1)},\\
+ a_n&=\frac{\sigma}{\sqrt{1-z_n^2}},&
+ b_n&=c-a_nz_n,& d_n&=1-a_n-b_n.
+\end{align*}
+The rounding error is at most $1/2$, so $t_n\to\sqrt{x}$ and
+$z_n=(nt_n^2-1)/(n-1)\to x$.
+Continuity and the strict inequalities above give, for all sufficiently
+large $n$, $0<k_n<n$, $t_n>0$, $|z_n|<1$, $a_n,b_n,d_n>0$, and
+\begin{equation}\label{eq:finitegap}
+ 2(n-1)c<(n-2)(a_n+b_n).
+\end{equation}
+All formulas below are used only for these dimensions. Put
+\begin{equation}\label{eq:matrix}
+ C_n=d_n I+a_nss^T+b_nee^T.
+\end{equation}
+It is positive definite, with diagonal $d_n+a_n+b_n=1$.
+The average of $s_is_j$ over $i>j$ equals $z_n$, and
+$(s_is_j)^2=1$. Hence its mean is $a_nz_n+b_n=c$ and its variance is
+\[
+ (a_n^2+b_n^2+2a_nb_nz_n)-(a_nz_n+b_n)^2
+ =a_n^2(1-z_n^2)=\sigma^2.
+\]
+
+It remains to establish the weight gap, including all eigenbasis choices.
+Let $B_n=C_n-d_nI$. Since $a_n,b_n>0$ and $s,e$ are independent,
+$B_n$ has two positive eigenvalues $\gamma_+>\gamma_->0$.
+For distinctness, in the orthonormal basis starting with $e/\sqrt n$
+on $\operatorname{span}(e,s)$, the off-diagonal entry is
+$na_nt_n\sqrt{1-t_n^2}>0$. All other eigenvalues of $B_n$ are zero;
+their eigenvectors are orthogonal to $e$ and have weight zero.
+The two positive eigendirections therefore carry weights $p_+,p_-$
+with $p_++p_-=1$. Their weighted mean and their eigenvalue sum are
+\[
+ r:=\delta_n^TB_n\delta_n
+ =a_n\frac{(2k_n-n)^2}{n}+b_nn
+ =(n-1)c+a_n+b_n,\qquad
+ T:=\gamma_++\gamma_-=n(a_n+b_n).
+\]
+By \eqref{eq:finitegap}, $r<T/2$. The identity
+\[
+ r-\frac T2=(\gamma_+-\gamma_-)(p_+-\tfrac12)
+\]
+implies $p_+<1/2<p_-$. The two eigendirections are simple and
+all remaining weights vanish, proving $\G(C_n)$ for every eigenbasis.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:question}]
+On $D$, $\sigma\ge c$ and $0<c<1/2$.
+Proposition~\ref{prop:obstruction} excludes $\sigma=c$ in every
+dimension, while Proposition~\ref{prop:construction} supplies a matrix
+in every sufficiently large dimension when $\sigma>c$.
+\end{proof}
+
+\begin{corollary}\label{cor:all}
+For any $(c,\sigma)\in A$, eventual existence with $\G$ holds
+exactly when $c<1/2$ and $\sigma>c$.
+For every compact subset of this open region, one common dimension
+threshold works for all its points.
+\end{corollary}
+\begin{proof}
+The two propositions prove the pointwise assertion.
+For compact uniformity, $x$, $a$, $b$, $d$, and $a+b-2c$ are continuous
+functions of $(c,\sigma)$ and their required positive margins have
+positive minima on the compact set. Also $x$ stays in a compact
+subinterval of $(0,1/2)$. The bound
+$|t_n-\sqrt{x}|\le1/n$ makes $z_n\to x$ uniform there. The
+coefficients and the strict inequality \eqref{eq:finitegap} therefore
+hold uniformly beyond one threshold.
+\end{proof}
+
+\section{Eigenspaces and boundary characteristics}
+The universal quantifier in Definition VI.1 matters when eigenvalues
+are repeated. The following criterion applies to every real symmetric
+matrix, with weights relative to any fixed unit vector $u$.
+\begin{proposition}\label{prop:projectors}
+Let $E_0$ be the top eigenspace, and let $E_1,\ldots,E_r$ be the
+eigenspaces for the distinct smaller eigenvalues. Put
+$q_j=\|P_{E_j}u\|^2$ and $m_j=\dim E_j$.
+The universal weight gap holds if and only if
+\begin{equation}\label{eq:projectors}
+ q_0<\max_{1\le j\le r}\frac{q_j}{m_j},
+\end{equation}
+where the maximum of an empty family is zero.
+\end{proposition}
+\begin{proof}
+In any orthonormal basis of $E_j$, the squared components of
+$P_{E_j}u$ sum to $q_j$. Hence one is at least $q_j/m_j$,
+whereas each weight in $E_0$ is at most $q_0$. This proves
+sufficiency. Conversely, choose a basis of $E_0$ concentrating its
+projection in one vector, whose weight is $q_0$. In each lower
+$E_j$, choose an orthonormal basis in which all projection
+components have absolute value $\sqrt{q_j/m_j}$. Such a basis
+exists: an orthogonal map sends the projection's unit direction to
+$(1,\ldots,1)/\sqrt{m_j}$; if $q_j=0$ every basis works.
+When \eqref{eq:projectors} fails, no weight in this combined basis
+exceeds the chosen top weight. The universal gap therefore fails.
+The same reasoning covers the scalar-matrix case $r=0$.
+\end{proof}
+
+\begin{corollary}\label{cor:circle}
+For $n\ge2$, a correlation matrix with $c^2+\sigma^2=1$ satisfies
+$\G$ if and only if $c<0$. In particular, none on this boundary
+with $c\ge0$ satisfies the universal gap.
+\end{corollary}
+\begin{proof}
+All off-diagonal entries have absolute value at most one. Equality of
+their average squared value to one forces all to have absolute value
+one. In a unit-vector Gram representation, equality in
+Cauchy--Schwarz makes all vectors signed copies of a single vector.
+Thus $C=ss^T$ with $s_i\in\{-1,1\}$, as in
+\cite[Lemma VI.11 and Example II.4]{SHG}.
+Here $E_0=\R s$, $m_1=n-1$, and
+$q_0=(\sum_i s_i)^2/n^2=(1+(n-1)c)/n$.
+Criterion~\eqref{eq:projectors} is $q_0<(1-q_0)/(n-1)$,
+equivalently $c<0$.
+\end{proof}
+
+\begin{corollary}\label{cor:zero}
+For every fixed $0<\sigma<1$, positive definite correlation matrices
+with $c=0$, standard deviation $\sigma$, and $\G$ exist in every
+sufficiently large dimension.
+\end{corollary}
+\begin{proof}
+In \eqref{eq:matrix}, take $k=\lceil n/2\rceil$ plus signs and set
+\[
+ z=\begin{cases}-1/(n-1),&n\text{ even},\\-1/n,&n\text{ odd},\end{cases}
+ \qquad a=\frac{\sigma}{\sqrt{1-z^2}},\quad b=-az,\quad d=1-a-b.
+\]
+For sufficiently large $n$, $a,b,d>0$ because $a\to\sigma$,
+$b\to0$ and $d\to1-\sigma>0$. The moment calculation of
+Proposition~\ref{prop:construction} gives exactly $c=0$ and
+standard deviation $\sigma$. The rank-two trace and Rayleigh
+quotient there are $T=n(a+b)$ and $r=a+b$, so $2r<T$ for $n>2$.
+For even $n$, $e\perp s$ and the active eigenvalues $na,nb$ are
+distinct because $a>b$. For odd $n$, their off-diagonal coupling
+is positive as in that proposition. In both cases the active
+directions are simple, their weights sum to one, and
+$r-T/2=(\gamma_+-\gamma_-)(p_+-1/2)<0$ proves $\G$.
+The zero-mean examples in \cite[Section VII, p.~18]{SHG} thus have
+an exact prescribed-variance construction in every large dimension.
+\end{proof}
+
+\begin{corollary}\label{cor:legal}
+Fix $(c,\sigma)$ in the legal half-disc
+$\{(c,\sigma):\sigma\ge0,\ c^2+\sigma^2\le1\}$.
+Eventual existence with $\G$ holds exactly when
+\[
+ 0\le c<1/2,\qquad \sigma>c,\qquad c^2+\sigma^2<1.
+\]
+\end{corollary}
+\begin{proof}
+For $c>0$ in the interior with $\sigma>0$, use
+Corollary~\ref{cor:all}; for $c=0$ use Corollary~\ref{cor:zero}.
+If $c<0$, positive semidefiniteness gives
+$0\le\delta_n^TC\delta_n=1+(n-1)c$, which fails for large $n$.
+For $c\ge0$ on the circle use Corollary~\ref{cor:circle}.
+If $\sigma=0$ and $c>0$, then
+$C=(1-c)I+cee^T$ has top weight one; if $c=\sigma=0$, $C=I$
+has an eigenbasis containing $\delta_n$, so $\G$ fails.
+These cases exhaust the legal half-disc.
+\end{proof}
+
+The same centered argument yields a spectral obstruction beyond
+correlation matrices, addressing the wider-matrix direction mentioned
+in \cite[Remark IV.7 and Section VII]{SHG}.
+\begin{corollary}\label{cor:symmetric}
+Let $H$ be real symmetric of size $n\ge3$, let $u$ be a unit vector,
+$\tau=\operatorname{tr}H/n$, and $r=u^THu-\tau>0$.
+If a top eigenvector has weight at most $1/2$ relative to $u$, then
+\[
+ \operatorname{tr}\bigl((H-\tau I)^2\bigr)\ge\frac{2n}{n-2}r^2.
+\]
+If also $H$ is positive semidefinite, then
+$u^THu\le\operatorname{tr}H/2$.
+\end{corollary}
+\begin{proof}
+Center the eigenvalues at $\tau$. They sum to zero, and their
+weighted sum is $r$. The pair estimate and Cauchy--Schwarz in
+Proposition~\ref{prop:obstruction} give the first assertion with
+$(n-1)c$ replaced by $r$. Nonnegative eigenvalues give
+$u^THu\le(\lambda_1+\lambda_2)/2\le\operatorname{tr}H/2$.
+\end{proof}
+
+\section{A rational example and coverage}
+Take $n=16$, $k=12$, $a=2/3$, $b=1/4$, $d=1/12$ in
+\eqref{eq:matrix}. Then $z=1/5$,
+\[
+ c=\frac{23}{60},\qquad \sigma^2=\frac{32}{75},\qquad
+ \lambda_1=\frac{145}{12},\quad\lambda_2=\frac{11}{4},\quad
+ \lambda_3=\cdots=\lambda_{16}=\frac1{12}.
+\]
+This point lies in $D$ above the diagonal. The top two eigenvectors
+are proportional to $e+4s$ and $3e-2s$, respectively, and their weights
+are exactly $3/7$ and $4/7$.
+The accompanying \texttt{verify.py} checks this example, exact moment
+and rank-two certificates in dimensions $16,17,24,100$, and centered
+two-point energy inequalities for integer controls in dimensions
+$3$ through $30$. It also checks exact zero-mean and circular-boundary
+controls in dimensions $4$ through $40$.
+These finite checks illustrate the formulas;
+the propositions prove the quantified statements.
+
+\begin{center}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\linewidth}>{\raggedright\arraybackslash}p{0.59\linewidth}@{}}
+\toprule
+Source item in \cite{SHG} & Coverage category and result \\
+\midrule
+Question III.5, p.~7 & Proved: Theorem~\ref{thm:question}, exact answer on $D$.\\
+Theorems III.3--III.4, pp.~6--7 & Prior proofs cited for $A_1,A_2$;
+proved completion and compact uniformity in Corollary~\ref{cor:all}.\\
+Remark III.7, p.~8 & Proved: the top-direction angle conclusion extends
+to $\sigma\le c$, Corollary~\ref{cor:majority}.\\
+Definition VI.1, p.~12 & Proved: exact eigenspace criterion,
+Proposition~\ref{prop:projectors}, for every symmetric matrix.\\
+Example II.4, p.~4; Lemma VI.11, p.~15 & Prior rank-one description cited;
+proved universal gap exactly for $c<0$, Corollary~\ref{cor:circle}.\\
+Section VII, p.~18: $c=0$ and $c<0$ & Proved: exact zero-mean witnesses
+in every large dimension and full legal-half-disc classification,
+Corollaries~\ref{cor:zero}--\ref{cor:legal}.\\
+Remark IV.7, p.~10; Section VII, p.~18 & Prior largest-eigenvalue estimate
+cited; proved centered weight obstruction for symmetric matrices,
+Corollary~\ref{cor:symmetric}.\\
+Section VII, p.~18: skewness/kurtosis & Not covered: higher-moment
+refinements of the source's spectral estimates.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begingroup\raggedright
+\paragraph{Formal scope.}
+In the pinned
+\href{https://github.com/the-omega-institute/trureturing/blob/8c3421e2977f07cb0b5d9b30b7ede138d9951cb5/D5/S3/Estimation/CorrelationTopEigenvectorWeight.lean}{\texttt{CorrelationTopEigenvectorWeight.lean}},
+the declaration in namespace \texttt{D5.S3.Estimation},
+\texttt{CorrelationTopEigenvectorWeight.result},
+proves \texttt{claim}: for each point of \texttt{domainD}, the eventual
+existence condition of Theorem~\ref{thm:question} is equivalent to $c<\sigma$.
+Its \texttt{IsCorrelation}, \texttt{meanCorr}, \texttt{stdCorr} and
+\texttt{SatisfiesWGap} definitions match \eqref{eq:moments} and $\G$.
+The explicit finite-dimensional bounds, all-$A$ and legal-half-disc
+classifications, compact uniformity, majority/angle bound, eigenspace
+criterion, boundary corollaries, general symmetric-matrix obstruction,
+and rational examples have the written proofs above; their additional
+scope is distinct from that declaration. The checker covers the finite
+identities and parameter ranges specified alongside the example.\par
+\endgroup
+
+\begin{thebibliography}{9}
+\bibitem{SHG}
+Y.~Stepanov, H.~Herrmann and T.~Guhr,
+\emph{Generic features in the spectral decomposition of correlation matrices},
+J. Math. Phys. \textbf{62} (2021), 083505,
+\href{https://doi.org/10.1063/5.0054438}{doi:10.1063/5.0054438}.
+The question, numbering and page locators here refer to
+\href{https://arxiv.org/abs/2104.08966v1}{arXiv:2104.08966v1}.
+\bibitem{RD}
+O.~Roustant and Y.~Deville,
+\emph{On the validity of parametric block correlation matrices with constant
+within and between group correlations},
+\href{https://arxiv.org/abs/1705.09793v1}{arXiv:1705.09793v1} (2017).
+\end{thebibliography}
+\noindent\small Licensed under Creative Commons Attribution 4.0 International
+(CC BY 4.0; \texttt{cc-by-4.0}).
+\end{document}

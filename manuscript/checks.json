@@ -1,0 +1,273 @@
+{
+  "arithmetic": "exact rational and integer",
+  "boundary_controls": {
+    "circular_boundary_controls": 851,
+    "dimensions": [
+      4,
+      40
+    ],
+    "negative_mean_circular_controls": 163,
+    "scope": "Exact zero-mean rank-two witnesses and the rank-one eigenspace criterion; fixed-parameter eventual existence has a written proof in note.tex.",
+    "zero_mean_witnesses": [
+      {
+        "dimension": 4,
+        "mean": "0",
+        "variance": "8/25"
+      },
+      {
+        "dimension": 5,
+        "mean": "0",
+        "variance": "216/625"
+      },
+      {
+        "dimension": 6,
+        "mean": "0",
+        "variance": "216/625"
+      },
+      {
+        "dimension": 7,
+        "mean": "0",
+        "variance": "432/1225"
+      },
+      {
+        "dimension": 8,
+        "mean": "0",
+        "variance": "432/1225"
+      },
+      {
+        "dimension": 9,
+        "mean": "0",
+        "variance": "16/45"
+      },
+      {
+        "dimension": 10,
+        "mean": "0",
+        "variance": "16/45"
+      },
+      {
+        "dimension": 11,
+        "mean": "0",
+        "variance": "216/605"
+      },
+      {
+        "dimension": 12,
+        "mean": "0",
+        "variance": "216/605"
+      },
+      {
+        "dimension": 13,
+        "mean": "0",
+        "variance": "1512/4225"
+      },
+      {
+        "dimension": 14,
+        "mean": "0",
+        "variance": "1512/4225"
+      },
+      {
+        "dimension": 15,
+        "mean": "0",
+        "variance": "224/625"
+      },
+      {
+        "dimension": 16,
+        "mean": "0",
+        "variance": "224/625"
+      },
+      {
+        "dimension": 17,
+        "mean": "0",
+        "variance": "2592/7225"
+      },
+      {
+        "dimension": 18,
+        "mean": "0",
+        "variance": "2592/7225"
+      },
+      {
+        "dimension": 19,
+        "mean": "0",
+        "variance": "648/1805"
+      },
+      {
+        "dimension": 20,
+        "mean": "0",
+        "variance": "648/1805"
+      },
+      {
+        "dimension": 21,
+        "mean": "0",
+        "variance": "88/245"
+      },
+      {
+        "dimension": 22,
+        "mean": "0",
+        "variance": "88/245"
+      },
+      {
+        "dimension": 23,
+        "mean": "0",
+        "variance": "4752/13225"
+      },
+      {
+        "dimension": 24,
+        "mean": "0",
+        "variance": "4752/13225"
+      },
+      {
+        "dimension": 25,
+        "mean": "0",
+        "variance": "5616/15625"
+      },
+      {
+        "dimension": 26,
+        "mean": "0",
+        "variance": "5616/15625"
+      },
+      {
+        "dimension": 27,
+        "mean": "0",
+        "variance": "728/2025"
+      },
+      {
+        "dimension": 28,
+        "mean": "0",
+        "variance": "728/2025"
+      },
+      {
+        "dimension": 29,
+        "mean": "0",
+        "variance": "1512/4205"
+      },
+      {
+        "dimension": 30,
+        "mean": "0",
+        "variance": "1512/4205"
+      },
+      {
+        "dimension": 31,
+        "mean": "0",
+        "variance": "1728/4805"
+      },
+      {
+        "dimension": 32,
+        "mean": "0",
+        "variance": "1728/4805"
+      },
+      {
+        "dimension": 33,
+        "mean": "0",
+        "variance": "1088/3025"
+      },
+      {
+        "dimension": 34,
+        "mean": "0",
+        "variance": "1088/3025"
+      },
+      {
+        "dimension": 35,
+        "mean": "0",
+        "variance": "11016/30625"
+      },
+      {
+        "dimension": 36,
+        "mean": "0",
+        "variance": "11016/30625"
+      },
+      {
+        "dimension": 37,
+        "mean": "0",
+        "variance": "12312/34225"
+      },
+      {
+        "dimension": 38,
+        "mean": "0",
+        "variance": "12312/34225"
+      },
+      {
+        "dimension": 39,
+        "mean": "0",
+        "variance": "304/845"
+      },
+      {
+        "dimension": 40,
+        "mean": "0",
+        "variance": "304/845"
+      }
+    ]
+  },
+  "centered_energy": {
+    "dimensions": [
+      3,
+      30
+    ],
+    "equality_controls": 28,
+    "inequality_controls": 2100
+  },
+  "coverage": "Four positive-mean rank-two correlation matrices, zero-mean and circular-boundary controls, and finite centered-energy controls; quantified statements have written proofs in note.tex.",
+  "schema_version": 1,
+  "status": "all exact checks passed",
+  "witnesses": [
+    {
+      "dimension": 16,
+      "domain": "D with sigma > c",
+      "eigenvalues": [
+        "145/12",
+        "11/4",
+        "1/12 (multiplicity 14)"
+      ],
+      "mean": "23/60",
+      "plus_signs": 12,
+      "positive_definiteness": "d I + a s s^T + b e e^T with a, b, d positive",
+      "positive_direction_weights": [
+        "3/7",
+        "4/7"
+      ],
+      "rank_two_determinant": "32",
+      "rank_two_rayleigh": "20/3",
+      "rank_two_trace": "44/3",
+      "scalar_diagonal": "1/12",
+      "variance": "32/75",
+      "weight_gap": "two positive simple spectral directions, with 2 r < T"
+    },
+    {
+      "dimension": 17,
+      "domain": "D with sigma > c",
+      "mean": "83/204",
+      "plus_signs": 13,
+      "positive_definiteness": "d I + a s s^T + b e e^T with a, b, d positive",
+      "rank_two_determinant": "104/3",
+      "rank_two_rayleigh": "505/68",
+      "rank_two_trace": "187/12",
+      "scalar_diagonal": "1/12",
+      "variance": "364/867",
+      "weight_gap": "two positive simple spectral directions, with 2 r < T"
+    },
+    {
+      "dimension": 24,
+      "domain": "D with sigma > c",
+      "mean": "109/276",
+      "plus_signs": 18,
+      "positive_definiteness": "d I + a s s^T + b e e^T with a, b, d positive",
+      "rank_two_determinant": "72",
+      "rank_two_rayleigh": "10",
+      "rank_two_trace": "22",
+      "scalar_diagonal": "1/12",
+      "variance": "224/529",
+      "weight_gap": "two positive simple spectral directions, with 2 r < T"
+    },
+    {
+      "dimension": 100,
+      "domain": "D with sigma > c",
+      "mean": "11833/29700",
+      "plus_signs": 74,
+      "positive_definiteness": "d I + a s s^T + b e e^T with a, b, d positive",
+      "rank_two_determinant": "3848/3",
+      "rank_two_rayleigh": "1009/25",
+      "rank_two_trace": "275/3",
+      "scalar_diagonal": "1/12",
+      "variance": "23288096/55130625",
+      "weight_gap": "two positive simple spectral directions, with 2 r < T"
+    }
+  ]
+}

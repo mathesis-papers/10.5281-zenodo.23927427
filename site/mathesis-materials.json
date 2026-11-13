@@ -1,0 +1,14 @@
+{
+  "schema": "mathesis.materials.v1",
+  "work": "stepanov-herrmann-guhr-2021-correlation-top-eigenvector-weight",
+  "version": 2,
+  "repository_url": "https://github.com/mathesis-papers/6aec38599153a8dcadd6fdda",
+  "site_url": "https://papers.trureturing.org/6aec38599153a8dcadd6fdda/",
+  "doi": "10.5281/zenodo.23927428",
+  "reading": {
+    "en": "https://papers.trureturing.org/6aec38599153a8dcadd6fdda/en/",
+    "zh": "https://papers.trureturing.org/6aec38599153a8dcadd6fdda/zh/"
+  },
+  "slides": [],
+  "visualizations": []
+}
