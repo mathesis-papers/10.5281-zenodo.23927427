@@ -2,16 +2,16 @@
   "files": {
     "pdf": {
       "bytes": 91243,
-      "matches_public": null,
+      "matches_public": true,
       "path": "paper.pdf",
-      "public_sha256": null,
+      "public_sha256": "ff5c1a8f5af8d94f0c8785dab07e672516a3931bcbfb0a93ca2c5c7340185e1e",
       "sha256": "ff5c1a8f5af8d94f0c8785dab07e672516a3931bcbfb0a93ca2c5c7340185e1e"
     },
     "source": {
       "bytes": 14624,
-      "matches_public": null,
+      "matches_public": true,
       "path": "source.archive",
-      "public_sha256": null,
+      "public_sha256": "85119aab85cb1109001de5f66ba19df8306867142b3a3e6bbecb1c7baa1b2385",
       "sha256": "85119aab85cb1109001de5f66ba19df8306867142b3a3e6bbecb1c7baa1b2385"
     }
   },
@@ -38,6 +38,8 @@
     "license": "CC-BY-4.0",
     "msc": [],
     "pdf": {
+      "bytes": 91243,
+      "sha256": "ff5c1a8f5af8d94f0c8785dab07e672516a3931bcbfb0a93ca2c5c7340185e1e",
       "url": "/api/v1/collected-papers/stepanov-herrmann-guhr-2021-correlation-top-eigenvector-weight/files/pdf?version=2"
     },
     "previous_version": null,
@@ -46,6 +48,8 @@
     "record": "stepanov-herrmann-guhr-2021-correlation-top-eigenvector-weight",
     "repository_name": "10.5281-zenodo.23927427",
     "source": {
+      "bytes": 14624,
+      "sha256": "85119aab85cb1109001de5f66ba19df8306867142b3a3e6bbecb1c7baa1b2385",
       "url": "/api/v1/collected-papers/stepanov-herrmann-guhr-2021-correlation-top-eigenvector-weight/files/source?version=2"
     },
     "title": "Resolving Question III.5 of Stepanov–Herrmann–Guhr (arXiv:2104.08966v1, p. 7): the top-eigenvector weight gap occurs exactly above sigma = c",
